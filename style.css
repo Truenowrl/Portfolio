@@ -333,3 +333,157 @@ span{
         font-size: 4rem;
     }
 }
+/* --- Education Section Styling --- */
+
+.education {
+    padding-top: 14rem; 
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 2rem;
+}
+
+.education-box {
+    background-color: #111111;
+    border-left: 4px solid #b74b4b; /* Distinct timeline bar look on the left side */
+    border-top: 1px solid #1c1c1c;
+    border-right: 1px solid #1c1c1c;
+    border-bottom: 1px solid #1c1c1c;
+    border-radius: 1rem;
+    padding: 3rem;
+    transition: 0.4s ease;
+}
+
+.edu-year {
+    font-size: 1.4rem;
+    color: #b74b4b;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.edu-year i {
+    margin-right: 0.8rem;
+}
+
+.education-box h3 {
+    font-size: 2.4rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.education-box h4 {
+    font-size: 1.6rem;
+    color: #cccccc;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.education-box p {
+    font-size: 1.4rem;
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+
+/* Timeline box interactive scale */
+.education-box:hover {
+    transform: translateX(10px); /* Slides slightly forward dynamically on hover */
+    background-color: #161616;
+    box-shadow: 0 0 20px rgba(183, 75, 75, 0.2);
+}
+
+@media (max-width: 768px) {
+    .education {
+        padding-top: 12rem;
+    }
+}
+/* --- Contact Section Styling --- */
+
+.contact {
+    padding-top: 14rem; 
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info, .contact-action {
+    background-color: #111111;
+    border: 1px solid #1c1c1c;
+    border-radius: 1.5rem;
+    padding: 4rem 3rem;
+    transition: 0.4s ease;
+}
+
+.contact-info h3, .contact-action h3 {
+    font-size: 2.6rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p, .contact-action p {
+    font-size: 1.5rem;
+    color: #aaaaaa;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item i {
+    font-size: 2.2rem;
+    color: #b74b4b;
+    width: 3rem;
+    text-align: center;
+}
+
+.info-item span {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.contact-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #b74b4b; /* Highlights the action box */
+}
+
+/* Interactive effects */
+.contact-info:hover, .contact-action:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(183, 75, 75, 0.15);
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding-top: 12rem;
+    }
+}
