@@ -259,7 +259,6 @@ span{
 
 /* --- Skills Section Styling --- */
 
-/* Base container adjustment to prevent overlapping with the fixed header */
 .skills {
     padding-top: 14rem; 
     background-color: black;
@@ -269,7 +268,6 @@ span{
     justify-content: flex-start;
 }
 
-/* Section Title */
 .heading {
     font-size: 5rem;
     font-weight: 700;
@@ -277,7 +275,6 @@ span{
     text-align: center;
 }
 
-/* Grid layout for your items */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -287,7 +284,6 @@ span{
     padding: 0 2rem;
 }
 
-/* Individual Card Design */
 .skills-box {
     background-color: #111111;
     border: 2px solid #b74b4b;
@@ -297,21 +293,18 @@ span{
     transition: 0.4s ease;
 }
 
-/* Icon style */
 .skills-box i {
     font-size: 5rem;
     color: #b74b4b;
     margin-bottom: 1.5rem;
 }
 
-/* Skill Name */
 .skills-box h3 {
     font-size: 2.2rem;
     color: white;
     margin-bottom: 1rem;
 }
 
-/* Skill Description Text */
 .skills-box p {
     font-size: 1.4rem;
     color: #cccccc;
@@ -324,7 +317,6 @@ span{
     background-color: #161616;
 }
 
-/* Mobile Responsiveness for Skills Page */
 @media (max-width: 768px) {
     .skills {
         padding-top: 12rem;
@@ -333,7 +325,6 @@ span{
         font-size: 4rem;
     }
 }
-/* --- Education Section Styling --- */
 
 .education {
     padding-top: 14rem; 
@@ -355,7 +346,7 @@ span{
 
 .education-box {
     background-color: #111111;
-    border-left: 4px solid #b74b4b; /* Distinct timeline bar look on the left side */
+    border-left: 4px solid #b74b4b;
     border-top: 1px solid #1c1c1c;
     border-right: 1px solid #1c1c1c;
     border-bottom: 1px solid #1c1c1c;
@@ -395,9 +386,8 @@ span{
     line-height: 1.6;
 }
 
-/* Timeline box interactive scale */
 .education-box:hover {
-    transform: translateX(10px); /* Slides slightly forward dynamically on hover */
+    transform: translateX(10px);
     background-color: #161616;
     box-shadow: 0 0 20px rgba(183, 75, 75, 0.2);
 }
@@ -407,7 +397,6 @@ span{
         padding-top: 12rem;
     }
 }
-/* --- Contact Section Styling --- */
 
 .contact {
     padding-top: 14rem; 
@@ -418,72 +407,68 @@ span{
     justify-content: flex-start;
 }
 
-.contact-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 4rem;
-    width: 100%;
-    max-width: 1000px;
-    padding: 0 2rem;
-    margin-top: 2rem;
-}
-
-.contact-info, .contact-action {
+.contact-card {
     background-color: #111111;
-    border: 1px solid #1c1c1c;
-    border-radius: 1.5rem;
-    padding: 4rem 3rem;
+    border: 2px solid #b74b4b;
+    border-radius: 2rem;
+    padding: 4rem;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(183, 75, 75, 0.1);
     transition: 0.4s ease;
+    margin: 2rem 2rem 0 2rem;
 }
 
-.contact-info h3, .contact-action h3 {
-    font-size: 2.6rem;
+.contact-card h3 {
+    font-size: 2.8rem;
     color: white;
     margin-bottom: 1.5rem;
 }
 
-.contact-info p, .contact-action p {
+.contact-card p {
     font-size: 1.5rem;
     color: #aaaaaa;
     line-height: 1.6;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 }
 
+/* Contact detail rows */
 .info-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .info-item i {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: #b74b4b;
-    width: 3rem;
-    text-align: center;
 }
 
-.info-item span {
-    font-size: 1.6rem;
+.info-item span, 
+.info-item a {
+    font-size: 1.7rem;
     color: white;
+    transition: 0.2s ease;
 }
 
-.contact-action {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #b74b4b; /* Highlights the action box */
+.info-item a:hover {
+    color: #b74b4b;
+    text-decoration: underline;
 }
 
-/* Interactive effects */
-.contact-info:hover, .contact-action:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(183, 75, 75, 0.15);
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #b74b4b;
 }
 
 @media (max-width: 768px) {
     .contact {
         padding-top: 12rem;
+    }
+    .contact-card {
+        padding: 3rem 2rem;
     }
 }
